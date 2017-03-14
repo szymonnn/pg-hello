@@ -13,7 +13,7 @@ function myInfo() {
 	
 }
 
-function network(){
+function networkState(){
 	network = navigator.connection;
 	navigator.notification.alert(network);
 }
