@@ -6,17 +6,12 @@ function onDeviceReady() {
 	navigator.notification.beep(1);
 }
 
-function deviceInfo() {
+function myInfo() {
 
-	info =  'Hi, I am your smartphone :-)' + '\n' +
+	info =  'Hi, Its me :-)' + '\n' +
 			'=====' + '\n' +
-			'Device Name    : '     + device.name     + '\n' + 
-			'Device Cordova : '  + device.cordova + '\n' + 
-			'Device Platform: ' + device.platform + '\n' + 
-			'Device UUID    : '     + device.uuid     + '\n' + 
-			'Device Model   : '    + device.model     + '\n' + 
-			'Device Version : '  + device.version  + '\n';
-
+			'My Name    : '     + Szymon  + '\n' + 
+			'My surname : '  + Nitecki + '\n';
 	navigator.notification.alert(info);
 	
 }
