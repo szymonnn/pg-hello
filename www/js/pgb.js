@@ -8,7 +8,12 @@ function onDeviceReady() {
 
 function myInfo() {
 
-	info =  'Czeœæ to ja'
+	info =  ''
 	navigator.notification.alert(info);
 	
+}
+
+function network(){
+	network = navigator.connection;
+	navigator.notification.alert(network);
 }
