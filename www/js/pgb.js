@@ -8,10 +8,7 @@ function onDeviceReady() {
 
 function myInfo() {
 
-	info =  'Hi, Its me :-)' + '\n' +
-			'=====' + '\n' +
-			'My Name    : '     + Szymon  + '\n' + 
-			'My surname : '  + Nitecki + '\n';
+	info =  'Czeœæ to ja'
 	navigator.notification.alert(info);
 	
 }
