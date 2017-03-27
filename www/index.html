@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<script src="js/pgb.js"></script>
-		<script src="cordova.js"></script>
-	</head>
-	<body onload="init()">
-		<p id="dp"></p>
-		<input type="button" onclick="deviceInfo()" value="Pick contact">
-	</body>
+  <head>
+    <title>Contact Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // specify contact search criteria
+        var options = new ContactFindOptions();
+        options.filter = "";      // empty search string returns all contacts
+        options.multiple = true;  // return multiple results
+        filter = ["displayName"]; // return contact.displayName field
+
+        // find contacts
+        navigator.contacts.find(filter, onSuccess, onError, options);
+    }
+
+    // onSuccess: Get a snapshot of the current contacts
+    //
+    function onSuccess(contacts) {
+        for (var i=0; i<contacts.length; i++) {
+            alert(contacts[i].displayName);
+        }
+    };
+
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+    <p>Find Contacts</p>
+  </body>
 </html>
