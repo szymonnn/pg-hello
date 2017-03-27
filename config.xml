@@ -4,7 +4,7 @@
 		id          = "myfirstapp"
         version     = "1.0.0" >
 
-    <name>Szymon Nitecki</name>
+    <name>Szymon Nitecki Improve</name>
     <description>Moja aplikacja</description>
     <author href="asd" email="sz@gmail.com">
 		John Brown
